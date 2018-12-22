@@ -1,0 +1,7 @@
+{% for post in posts %}
+<h3>{{ post.title }}</h3>
+<p>{{ post.text }}</p>
+    {% for comment in post.comment_set.all %}
+        {{ comment.text }}
+    {% endfor %}
+{% endfor %}
